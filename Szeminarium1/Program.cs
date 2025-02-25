@@ -48,7 +48,7 @@ namespace Szeminarium1
 
             graphicWindow.Load += GraphicWindow_Load;
             graphicWindow.Update += GraphicWindow_Update;
-            graphicWindow.Render += GraphicWindow_Render;
+            //graphicWindow.Render += GraphicWindow_Render;
 
             graphicWindow.Run();
         }
@@ -108,10 +108,10 @@ namespace Szeminarium1
             Gl.BindVertexArray(vao);
 
             float[] vertexArray = new float[] {
-                -0.5f, -0.5f, 0.0f,
                 +0.5f, -15.5f, 0.0f,
                  0.0f, +0.7f, 0.0f,
-                 1f, 1f, 0f
+                 5.0f, 4.0f, 7.0f,
+                 14.1f, 20.54f, 70.12f
             };
 
             float[] colorArray = new float[] {
@@ -127,14 +127,14 @@ namespace Szeminarium1
             };
 
             uint vertices = Gl.GenBuffer();
-            Gl.BindBuffer(GLEnum.ArrayBuffer, vertices);
+            
             Gl.BufferData(GLEnum.ArrayBuffer, (ReadOnlySpan<float>)vertexArray.AsSpan(), GLEnum.StaticDraw);
             Gl.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 0, null);
             Gl.EnableVertexAttribArray(0);
 
             uint colors = Gl.GenBuffer();
             Gl.BindBuffer(GLEnum.ArrayBuffer, colors);
-            Gl.BufferData(GLEnum.ArrayBuffer, (ReadOnlySpan<float>)colorArray.AsSpan(), GLEnum.StaticDraw);
+
             Gl.VertexAttribPointer(1, 4, VertexAttribPointerType.Float, false, 0, null);
             Gl.EnableVertexAttribArray(1);
 
