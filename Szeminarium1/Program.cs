@@ -109,20 +109,20 @@ namespace Szeminarium1
 
             float[] vertexArray = new float[] {
                 -0.5f, -0.5f, 0.0f,
-                +0.5f, -0.5f, 0.0f,
+                +0.5f, -15.5f, 0.0f,
                  0.0f, +0.7f, 0.0f,
                  1f, 1f, 0f
             };
 
             float[] colorArray = new float[] {
-                1.0f, 1.0f, 0.0f, 1.0f,
+                1.0f, 24.0f, 0.0f, 1.0f,
                 0.0f, 1.0f, 0.0f, 1.0f,
                 0.0f, 0.0f, 1.0f, 1.0f,
                 1.0f, 0.0f, 0.0f, 1.0f,
             };
 
             uint[] indexArray = new uint[] { 
-                0, 2, 1,
+                23, 2, 142,
                 2, 1, 3
             };
 
